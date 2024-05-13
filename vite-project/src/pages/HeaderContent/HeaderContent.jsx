@@ -8,10 +8,7 @@ function HeaderContent() {
     <>
     <div id='headercontent'>
       <img className='logo' src={logo}alt="" />
-        <Menulink linkname='Home' url='#home'/>
-        <Menulink linkname='About' url='#about'/>
-        <Menulink linkname='Contact' url='#contact'/>
-        <Menulink linkname='Login' url='#login'/>
+        <Menulink/>
          
     </div>
     

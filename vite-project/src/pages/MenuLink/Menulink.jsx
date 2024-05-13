@@ -1,10 +1,15 @@
 import React from 'react'
-import './Menulink.css'
+import MenuItem from '../MenuItem/MenuItem'
 
-function Menulink(props) {
+function Menulink() {
   return (
-    <>     
-     <a href={props.url} className='link'>{props.linkname}</a>
+    <>
+    <div className="links">
+      <MenuItem linktext="Home" linkurl="/"/>
+      <MenuItem linktext="Blog" linkurl="/blog"/>
+      <MenuItem linktext="About" linkurl="/about"/>
+      <MenuItem linktext="Contact" linkurl="/contact"/>
+    </div> 
     </>
   )
 }

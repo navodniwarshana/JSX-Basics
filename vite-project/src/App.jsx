@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <HeaderContent/>
-      <Bodycontent/>
       <Bodycontent>
-          <button>click me</button>
+          <h2>Home Page</h2>
       </Bodycontent>
       <Footercontent/>
+      
     </>
   )
 }

@@ -5,7 +5,7 @@ function BodyContent(props) {
   return (
     <>
       <div id='bodycontent'>
-        <h3> Body Content </h3>
+        
         {props.children}
       </div>
     </>
