@@ -1,0 +1,17 @@
+#headercontent
+{
+  min-height: 10vh; background-color: aqua;
+  font-size: medium;
+  font-weight: bold;
+  justify-content: space-between;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+}
+.logo{
+  width: 4rem;
+  border: none;
+  padding: 0.5rem;
+  
+}
