@@ -1,14 +1,10 @@
 import React from 'react'
 import './Menulink.css'
 
-function Menulink() {
+function Menulink(props) {
   return (
     <>     
-          <Menulink linkname='Home' url='#home'/>
-          <Menulink linkname='About' url='../SubPages/About.jsx'/>
-          <Menulink linkname='Contact' url='contact'/>
-          <Menulink linkname='Login' url='login'/>
-   
+     <a href={props.url} className='link'>{props.linkname}</a>
     </>
   )
 }

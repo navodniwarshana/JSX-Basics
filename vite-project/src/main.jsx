@@ -13,10 +13,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-  {
-    path: "./pages/SubPages/About.jsx",
-    element: <About />,
-  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
