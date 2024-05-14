@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HeaderContent from '../pages/HeaderContent/HeaderContent'
 import Bodycontent from '../pages/BodyContent/Bodycontent'
 import Footercontent from '../pages/FooterContent/Footercontent'
@@ -29,7 +29,9 @@ function Contact() {
     const dicrfunc = () =>{
         setcount(count -1)
     } 
-
+    useEffect(()=>{
+        console.log("Hi");
+    },[num,count])
   return (
     <>
         <HeaderContent/>
