@@ -13,6 +13,27 @@ function About() {
   const namearr =["amal","kamal","bimal"];
   const namescount2=namearr.length;
 
+  //rest operator
+  function sum(...somenumbers){
+    let total=0;
+    somenumbers.forEach(somenumber =>{
+      total += somenumber;
+    });
+    return total;
+  }
+  console.log(sum(1,2,3,4,5,6,7,8,9))
+
+  function mybio(name,age,...rest){
+   console.log(name,age,rest)
+ }
+ mybio("nn",25,"a","b","c","d");
+
+ //spread operator :- use to array convert to list of items
+ console.log(Math.min(1,2,3,4,5,6,7,8,9));
+
+ let a=[2,3,4,5,6,7,8,9];
+ console.log(Math.min(...a)) //spread
+
   return (
     <>
       <HeaderContent/>
