@@ -11,6 +11,10 @@ function App() {
       <HeaderContent/>
       <Bodycontent>
           <h2>Home Page</h2>
+
+          <h2 className='one'>Font Font Type 1</h2>
+          <h2 className='two'>Font Font Type 2</h2>
+          
       </Bodycontent>
       <Footercontent/>
       
