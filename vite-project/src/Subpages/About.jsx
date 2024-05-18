@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import HeaderContent from '../pages/HeaderContent/HeaderContent'
 import Bodycontent from '../pages/BodyContent/Bodycontent'
 import Footercontent from '../pages/FooterContent/Footercontent'
@@ -6,53 +6,60 @@ import LoggedIn from './LoggedIn';
 
 function About() {
 
-  const loggedin=true;//false
-  const names =["Jane","Doe","jhone"];
-  const namescount=names.length;
+  
+ //-------- useRef & ref attribute ----------------------------
 
-  const namearr =["amal","kamal","bimal"];
-  const namescount2=namearr.length;
+  const [input,setinput] = useState(" <Input text gose here> ");
+  const [count,setcount] = useState(0);
 
-  //rest operator
-  function sum(...somenumbers){
-    let total=0;
-    somenumbers.forEach(somenumber =>{
-      total += somenumber;
-    });
-    return total;
+  /*
+  const countref=useRef("hi");
+  console.log(countref.current);
+ */
+
+  const countref=useRef(0);
+  const inputref=useRef();
+  const inputref2=useRef();
+
+  useEffect(() => {
+    //setcount ((count) => count - 1 );
+    countref.current =countref.current + 1;
+  })
+
+  const handlechange = (e) => {   
+    if(e.target.value.length == 0){
+      setinput("<Input text gose here>")
+    }else{
+      setinput(e.target.value);
+      inputref.current.style.backgroundColor = "red";
+    }
+  
   }
-  console.log(sum(1,2,3,4,5,6,7,8,9))
-
-  function mybio(name,age,...rest){
-   console.log(name,age,rest)
- }
- mybio("nn",25,"a","b","c","d");
-
- //spread operator :- use to array convert to list of items
- console.log(Math.min(1,2,3,4,5,6,7,8,9));
-
- let a=[2,3,4,5,6,7,8,9];
- console.log(Math.min(...a)) //spread
+  const handleclick =() =>{
+    if(inputref2.current.value == ""){
+      inputref2.current.focus()
+    }
+    else if(inputref2.current.value > 50){
+      alert("Success")
+    }
+    else{
+      alert("Error")
+    }
+  }
 
   return (
     <>
       <HeaderContent/>
       <Bodycontent>
-          <h2>About Page</h2>
-          {loggedin && <LoggedIn/> }
-          {!loggedin && <h2> Logged Out</h2>}
-
-          {namescount > 0 && names.map((value) =>  //use and operation
-              {
-                return <h2>{value}</h2>
-              }
-            )}
-          {namescount ==0 && <p>None Provided</p>}
-          
-          {/*use Ternary operators*/}
-          {namescount2 > 0 ? (namearr.map((name2)=>{
-            return <h3>{name2}</h3>
-          })) : (<p>None Provided</p>)}
+         
+          <input type="text" onChange={handlechange}/>
+          <p>You have inputs {input} </p>
+        {/* <p>Rendered {count}</p> */}
+          <p>Rendered {countref.current}</p>
+          <input type="text" ref={inputref} />
+          <br />
+          <input type="text" ref={inputref2} />
+          <button onClick={handleclick}> click me </button>
 
       </Bodycontent>
       <Footercontent/>
