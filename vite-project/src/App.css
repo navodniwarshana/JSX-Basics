@@ -21,3 +21,19 @@
   font-variation-settings:"wdth" 100;
     
 }
+.carousal{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height:100vh;
+}
+.img{
+    width: 100px;
+    height: 200px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
