@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserApp } from './Comp1'
 
-function Comp4(props) {
+function Comp4() {
+    const user =useContext(UserApp)
   return (
     <div>
         <h3>
             Child 3
         </h3>
-        <p>Welcome {props.user} </p>
+        <p>Welcome {user} </p>
 
     </div>
   )
