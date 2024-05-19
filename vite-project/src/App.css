@@ -37,3 +37,8 @@
 .hide{
     display: none;
 }
+
+.icon{
+    color: rgb(211, 211, 211);
+    width: 10rem;
+}

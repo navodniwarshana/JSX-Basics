@@ -4,6 +4,8 @@ import Bodycontent from './pages/BodyContent/Bodycontent'
 import Footercontent from './pages/FooterContent/Footercontent'
 import { data } from './data'
 import { useEffect, useState } from 'react'
+import { FaAlignJustify } from "react-icons/fa";
+import { FaAddressBook , FaBaby} from "react-icons/fa";
 
 
 function App() {
@@ -49,9 +51,23 @@ function App() {
         }
         <button onClick={handleNext}>Next</button>
       </div>
+      <div className='flex'>
+        <span className='p-2 m-2'>
+        <FaAlignJustify className='icon' />
+        </span>
+        <span className='p-2 m-2'>
+        <FaAddressBook  className='icon' />
+        </span>
+        <span className='p-1 m-1'>
+        <FaBaby  className='w-20 h-20' />
+        </span>
+      </div>
+
+      <h1 className='text-green-300 bg-orange-400'>hello tailwind</h1>
 
       </Bodycontent>
       <Footercontent/>
+    
       
     </>
   )
